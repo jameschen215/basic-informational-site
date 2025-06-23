@@ -2,6 +2,7 @@ import { createServer } from 'http';
 import fs from 'fs/promises';
 import url from 'url';
 import path from 'path';
+import 'dotenv/config';
 
 const PORT = process.env.PORT || 3000;
 const __filename = url.fileURLToPath(import.meta.url);
