@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<title>Basic Informational Site | About</title>
+	</head>
+	<body class="min-h-screen flex flex-col">
+		<header
+			class="flex items-center w-full max-w-[1440px] h-[56px] border-b border-black/10 px-4 md:p-6">
+			<div class="font-bold uppercase text-sky-600">
+				<span class="hidden md:block">Basic Information</span>
+				<span class="md:hidden">BI</span>
+			</div>
+			<nav class="ml-auto">
+				<ul
+					class="flex items-center h-full justify-center gap-8 font-light text-lg">
+					<li
+						class="border-b border-transparent hover:border-black transition-all duration-200">
+						<a href="/">Home</a>
+					</li>
+					<li class="border-b border-transparent hover:border-black">
+						<a href="/about">About</a>
+					</li>
+					<li class="border-b border-transparent hover:border-black">
+						<a href="/contact-me">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- footer -->
+		<main class="flex flex-col w-full flex-1 px-5 gap-5">
+			<h1
+				class="text-4xl font-bold text-black/95 text-center mt-20 md:text-6xl md:mb-20">
+				Contact us
+			</h1>
+			<p class="text-base text-black/90 font-light text-center md:text-2xl">
+				We’d love to hear from you (even though this is a fake project 😄).
+			</p>
+			<p class="text-base text-black/90 font-light text-center md:text-2xl">
+				Email: contact@example.com
+			</p>
+			<p class="text-base text-black/90 font-light text-center md:text-2xl">
+				Phone: 123-456-7890
+			</p>
+			<p class="text-base text-black/90 font-light text-center md:text-2xl">
+				Or send a message via smoke signal, pigeon, or telepathy.
+			</p>
+		</main>
+
+		<footer
+			class="mx-auto mt-auto w-full max-w-[1440px] border-t px-2 py-4 text-center text-black/80 border-black/10">
+			<p class="text-foreground/80 text-xs">
+				2025 &copy; Odin Project Assignment by
+				<a
+					href="https://github.com/jameschen215"
+					target="_blank"
+					aria-label="Go to author's Github repository"
+					class="hover:text-foreground focus:text-foreground focus-visible:ring-ring relative rounded-md font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2">
+					James Chen
+					<span class="sr-only">Open in new tab</span>
+				</a>
+				. All rights reserved.
+			</p>
+		</footer>
+
+		<script>
+			const links = document.querySelectorAll('nav a');
+			const currentPath = window.location.pathname;
+
+			links.forEach((link) => {
+				if (link.getAttribute('href') === currentPath) {
+					link.parentElement.classList.remove('border-transparent');
+				}
+			});
+		</script>
+	</body>
+</html>
